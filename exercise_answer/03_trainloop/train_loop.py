@@ -52,3 +52,5 @@ for epoch in range(10000):
         pred = (outputs > 0.5).float()
         acc = (pred == Y).float().mean()
         print(f"Epoch {epoch}: Loss = {loss.item():.4f}, Accuracy = {acc.item():.2f}")
+
+plot_metrics(loss_list, acc_list, save_path="xor_metrics.png")
